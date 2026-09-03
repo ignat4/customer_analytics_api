@@ -1,0 +1,13 @@
+# Кеш Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Середовище розробки
+.idea/
+.venv/
+venv/
+env/
+
+# Логи
+*.log
