@@ -19,7 +19,7 @@
 
 1. Клонуйте репозиторій та перейдіть у робочу директорію:
 git clone https://github.com/ignat4/customer_analytics_api.git
-cd customer_analytics
+cd customer_analytics_api
 
 2. Зберіть Docker-образ (переконайтеся, що Docker Desktop запущено):
 docker build -t ml-api .

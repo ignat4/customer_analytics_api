@@ -14,7 +14,7 @@ class CustomerDataProcessor:
         self.features = ['age', 'tenure', 'balance', 'num_products']
 
     def fit_transform(self, df: pd.DataFrame) -> pd.DataFrame:
-        """Навчає скейлер і трансформує дані (для етапу навчання)."""
+        """Навчає скейлер і трансформує дані ."""
         X = df[self.features].copy()
         # Заповнюємо пропуски медіаною, якщо вони є
         X = X.fillna(X.median())
@@ -24,7 +24,7 @@ class CustomerDataProcessor:
         return pd.DataFrame(scaled_features, columns=self.features)
 
     def transform(self, df: pd.DataFrame) -> pd.DataFrame:
-        """Трансформує нові дані на основі навченого скейлера (для API)."""
+        """Трансформує нові дані на основі навченого скейлера ."""
         X = df[self.features].copy()
         X = X.fillna(X.median())
         scaled_features = self.scaler.transform(X)
